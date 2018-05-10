@@ -1,7 +1,7 @@
 def deepSortDictToList(source):
     tmp=[]
     if isinstance(source, dict):
-        for k, v in sorted( source.items(), key=lambda pair: type(pair[1]) ):     
+        for k, v in sorted( source.items(), key=lambda pair: (type(pair[1]), pair[0])):     
             tmp.append(k)
             tmp.append( deepSortDictToList( v ) )
     else:
