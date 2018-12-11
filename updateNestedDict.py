@@ -1,4 +1,4 @@
-def getUpdateNestedDict(ori, update, matchType=0, addNonExisted=True):
+def getUpdateNestedDict(ori, update, matchType=1, addNonExisted=False):
     '''
     return a updated dictionary, original dictionary remain untouched.
     '''
@@ -50,7 +50,7 @@ def updateNestedDict(ori, update,  matchType=1, addNonExisted=False):
                 pass#print('In add non existed mode, key %s not exist in target dictionary, add it to target dictionary.'%k, 3)
                 ori[k] = update[k]
             else:
-                pass#pLog('key %s not exist in target dictionary, skip.'%(pKey+':'+k), 3)
+                pass#print('key %s not exist in target dictionary, skip.'%(pKey+':'+k), 3)
 
 //Test script
 import json 
